@@ -3,7 +3,7 @@
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
 product_list = []
-c_cstring = 0
+c_string = 0
 palindromes = []
 
 # find all products of two 3-digit numbers

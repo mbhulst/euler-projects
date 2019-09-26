@@ -21,4 +21,4 @@ for number in range(2,  1000000):
     print(sequence)
     length_chain.append((len(sequence)))
 
-print(length_chain.index(max(length_chain))+2)
+print("The longest chain under one million is produced by {}." .format(length_chain.index(max(length_chain))+2))

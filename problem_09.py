@@ -9,5 +9,5 @@ for a in range(end_range):
     for b in range(a+1, end_range):
         c = (a**2 + b**2)**0.5
         if a + b + c == find_sum:
-            print(int(a*b*c))
+            print("The product abc of the Pythagorean triplet for which a + b + c = 1000 is {}." .format(int(a*b*c)))
             break

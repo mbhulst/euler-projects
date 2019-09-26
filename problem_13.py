@@ -9,4 +9,3 @@ for i in range(100):
     sum_numbers += data[i]
 
 print(sum_numbers)
-

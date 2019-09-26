@@ -9,4 +9,4 @@ for i in range(len(digits)):
     sum_digits = sum_digits + int(digits[i])
     print(sum_digits)
 
-print(sum_digits)
+print("The sum of the digits of the number 2^1000 is {}." .format(sum_digits))

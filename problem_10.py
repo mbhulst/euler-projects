@@ -14,4 +14,4 @@ while num < 2000000:
         prime_factors.append(num)
 
 print(prime_factors)
-print(sum(prime_factors))
+print("The sum of all the primes below two million is {}." .format(sum(prime_factors)))
