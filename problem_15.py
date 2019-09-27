@@ -2,17 +2,15 @@
 # there are exactly 6 routes to the bottom right corner.
 # How many such routes are there through a 20×20 grid?
 
-# options = 0
+import numpy as np
 
-# for grid_size in range(1, 10):
-#    options += 2
+grid_size = 20
 
-grid_number = 20
-options_total_half = 1
-options_column = 1
-for i in range(2, grid_number+1):
-    options_column = options_column + grid_number-1
-    options_total_half = options_total_half + options_column
-    print(i, options_column, options_total_half, options_total_half*2)
+grid = np.ones((grid_size+1, grid_size+1))
 
-# not solved yet!
+for x in range(1, grid_size+1):
+    for y in range(1, grid_size+1):
+        grid[x, y] = int(grid[x-1, y] + grid[x, y-1])
+
+print("There are {} routes from the top left corner to the bottom right corner in a {}x{} grid."
+      .format(int(grid[grid_size, grid_size]), grid_size, grid_size))
