@@ -6,11 +6,11 @@ import numpy as np
 
 grid_size = 20
 
-grid = np.ones((grid_size+1, grid_size+1))
+grid = np.ones((grid_size + 1, grid_size + 1))
 
-for x in range(1, grid_size+1):
-    for y in range(1, grid_size+1):
-        grid[x, y] = int(grid[x-1, y] + grid[x, y-1])
+for x in range(1, grid_size + 1):
+    for y in range(1, grid_size + 1):
+        grid[x, y] = int(grid[x - 1, y] + grid[x, y - 1])
 
 print("There are {} routes from the top left corner to the bottom right corner in a {}x{} grid."
       .format(int(grid[grid_size, grid_size]), grid_size, grid_size))
