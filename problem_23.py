@@ -14,8 +14,37 @@
 
 # Find all abundant numbers below 28123:
 
+abundant_numbers = []
+
+for number in range(28123):
+    sum_divisors = 0
+    for divisor in range(1, int(number/2 + 1)):
+        if number % divisor == 0:
+            sum_divisors += divisor
+    if sum_divisors > number:
+        abundant_numbers.append(number)
+print(len(abundant_numbers))
+
 # Determine all the sums of these numbers:
 
-# Find duplicates and remove everything above 28123
+sum_abundant_numbers = []
 
-# 28123 - sums
+for abundant_number in range(len(abundant_numbers)):
+    for summator in range(abundant_number, len(abundant_numbers)):
+        possible = abundant_numbers[abundant_number] + abundant_numbers[summator]
+        if possible <= 28123:
+            sum_abundant_numbers.append(abundant_numbers[abundant_number] + abundant_numbers[summator])
+print(len(sum_abundant_numbers))
+
+
+# Check which are not in sum_abundant_numbers
+
+sums = set(sum_abundant_numbers)
+
+answer = 0
+for number in range(1, 28123):
+    yes_or_no = number in sums
+    if yes_or_no is False:
+        answer += number
+
+print(answer)

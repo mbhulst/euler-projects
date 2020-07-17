@@ -16,7 +16,7 @@ first_of_the_months = [days]  # store the day number (after 1 Jan 1900) of each 
 
 
 for year in range(1900, 2001):
-    for month in range(1, 13): # calculate for each year how long each monht takes
+    for month in range(1, 13): # calculate for each year how long each month takes
         if month == 2:                                                      # Feb
             if year % 4 == 0 and year % 100 != 0 and year % 400 != 0:       # Feb: regular leap year
                 first_of_the_months.append(days + 29)
